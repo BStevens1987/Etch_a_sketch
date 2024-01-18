@@ -14,11 +14,18 @@ function createGrid(size) {
       div.id = 'cell';
       rowContainer.appendChild(div);
       div.addEventListener("mouseover", () => {
-        div.style.backgroundColor = 'black';
+        div.style.backgroundColor = randomColor ();
       })
     };
   };
 };
+
+function randomColor () {
+const randomNum = Math.floor(Math.random()*7)
+const color = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+return color[randomNum];
+};
+
 
 createGrid(16);
 
