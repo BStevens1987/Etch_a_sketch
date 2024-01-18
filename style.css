@@ -1,5 +1,4 @@
 * {
-  outline: 1px solid red;
   margin: 0px;
   padding: 0px;
 }
@@ -20,5 +19,5 @@
 #cell {
   height: 20px;
   width: 20px;
-
+  outline: 1px solid lightgrey;
 }
