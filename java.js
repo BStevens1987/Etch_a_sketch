@@ -26,12 +26,15 @@ const color = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 return color[randomNum];
 };
 
-
-createGrid(16);
+let input = 16;
+createGrid(input);
 
 const btn = document.querySelector('button')
 btn.addEventListener('click', () => {
-  const input = prompt("Enter a size between 1 and 100: ");
+  input = Number(-1);
+  while (input < 1 || input > 100) {
+    input = prompt("Enter a size between 1 and 100: ");
+  };
   container.removeChild(document.querySelector('#subcontainer'));
   createGrid(input);
 });
